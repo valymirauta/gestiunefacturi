@@ -16,5 +16,19 @@ namespace gestiuneFacturi
         {
             InitializeComponent();
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            if(txtUser.Text=="ADMIN" && txtPass.Text == "admin")
+            {
+                Form1 frm1 = new Form1();
+                this.Hide();
+                frm1.Show();
+            }
+            else if (txtUser.Text != "ADMIN" || txtPass.Text != "admin")
+            {
+                MessageBox.Show("Username or password is incorrect");
+            }
+        }
     }
 }

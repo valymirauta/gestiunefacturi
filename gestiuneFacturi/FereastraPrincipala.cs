@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace gestiuneFacturi
 {
@@ -18,6 +20,7 @@ namespace gestiuneFacturi
         }
 
         DataTable table = new DataTable();
+        
 
         private void FereastraPrincipala_Load(object sender, EventArgs e)
         {
@@ -31,16 +34,39 @@ namespace gestiuneFacturi
 
         private void toolStripMenuItem3_Click(object sender, EventArgs e)
         {
-            table.Columns.Add("ID", typeof(int)); 
-            table.Columns.Add("Furnizor", typeof(string)); 
-            table.Columns.Add("Nr/serie", typeof(string)); 
-            table.Columns.Add("Explicatii", typeof(string)); 
-            table.Columns.Add("Data_emitere", typeof(string)); 
-            table.Columns.Add("Suma", typeof(double));
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.DataSource = initializareTabelDate(initializareFacturi());
+        }
 
-            dataGridView1.DataSource = table;
+        private Hashtable initializareFacturi()
+        {
 
+            Hashtable facturi = new Hashtable();
+            facturi.Add("1", new Facturi("TM / 1234", "apa rece", "25-08-2020", 895.35));
 
+            return facturi;
+        }
+
+        private DataTable initializareTabelDate( Hashtable ht)
+        {
+
+            DataTable table = new DataTable();
+            
+            table.Columns.Add("Nr/serie");
+            table.Columns.Add("Explicatii");
+            table.Columns.Add("Data_emitere");
+            table.Columns.Add("Suma");
+
+            Facturi fact;
+
+            foreach (var facturi in ht.Values)
+            {
+                fact = (Facturi)facturi;
+                table.Rows.Add(fact.Nr_serie, fact.Explicatii, fact.Data_emitere, fact.Suma);
+            }
+
+            return table;
         }
     }
 }
+

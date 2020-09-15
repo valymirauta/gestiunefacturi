@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace gestiuneFacturi
 {
-    public partial class Form1 : Form
+    public partial class Login : Form
     {
-        public Form1()
+        public Login()
         {
             InitializeComponent();
         }
@@ -21,9 +21,10 @@ namespace gestiuneFacturi
         {
             if(txtUser.Text=="ADMIN" && txtPass.Text == "admin")
             {
-                Form1 frm1 = new Form1();
+                
                 this.Hide();
-                frm1.Show();
+                FereastraPrincipala ferPrin = new FereastraPrincipala();
+                ferPrin.Show();
             }
             else if (txtUser.Text != "ADMIN" || txtPass.Text != "admin")
             {

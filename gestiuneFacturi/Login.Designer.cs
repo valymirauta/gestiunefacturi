@@ -1,6 +1,6 @@
 ﻿namespace gestiuneFacturi
 {
-    partial class Form1
+    partial class Login
     {
         /// <summary>
         /// Required designer variable.
@@ -92,8 +92,9 @@
             this.Controls.Add(this.lblPass);
             this.Controls.Add(this.txtUser);
             this.Controls.Add(this.lblUsr);
+            this.Location = new System.Drawing.Point(300, 400);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Aplicatie pentru gestionarea facturilor";
             this.ResumeLayout(false);
             this.PerformLayout();
 

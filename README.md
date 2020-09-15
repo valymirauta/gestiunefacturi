@@ -9,5 +9,12 @@ fiind apoi redirectionat catre fereastra principala
 ![alt text](https://github.com/valymirauta/gestiunefacturi/blob/master/imgReadme/fereastraPrincipala.JPG)
 
 unde va putea efectua operatii de vizualizare , adaugare si stergere a furnizorilor si facturilor.
-![alt text](https://github.com/valymirauta/gestiunefacturi/blob/master/imgReadme/fereastraF0acturi.JPG)
+
+<img
+src=“imaginiReadme/fereastraFacturi.JPG”
+raw=true
+alt=“Subject Pronouns”
+style=“margin-right: 10px;”
+/>
+
 

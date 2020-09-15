@@ -5,5 +5,9 @@ Accesul in aplicatie presupune identificarea utilizatorului printr-o fereastra d
 
 ![alt text](https://github.com/valymirauta/gestiunefacturi/blob/master/imgReadme/login.JPG)
 
-fiind apoi redirectionat catre fereastra principala unde va putea efectua operatii de vizualizare , adaugare si stergere a furnizorilor si facturilor.
+fiind apoi redirectionat catre fereastra principala
+![alt text](https://github.com/valymirauta/gestiunefacturi/blob/master/imgReadme/fereastraPrincipala.JPG)
+
+unde va putea efectua operatii de vizualizare , adaugare si stergere a furnizorilor si facturilor.
+![alt text](https://github.com/valymirauta/gestiunefacturi/blob/master/imgReadme/fereastraF0acturi.JPG)
 

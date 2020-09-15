@@ -50,7 +50,6 @@
             this.listaFacturi.Name = "listaFacturi";
             this.listaFacturi.Size = new System.Drawing.Size(754, 310);
             this.listaFacturi.TabIndex = 1;
-            
             // 
             // btnAdaugare
             // 
@@ -61,6 +60,7 @@
             this.btnAdaugare.TabIndex = 2;
             this.btnAdaugare.Text = "Adaugare";
             this.btnAdaugare.UseVisualStyleBackColor = true;
+            this.btnAdaugare.Click += new System.EventHandler(this.btnAdaugare_Click);
             // 
             // contextMenuStrip1
             // 
@@ -103,7 +103,6 @@
             this.label1.Size = new System.Drawing.Size(177, 29);
             this.label1.TabIndex = 7;
             this.label1.Text = "Lista facturilor";
-            
             // 
             // btnInchidere
             // 
@@ -114,6 +113,7 @@
             this.btnInchidere.TabIndex = 8;
             this.btnInchidere.Text = "Inchidere";
             this.btnInchidere.UseVisualStyleBackColor = true;
+            this.btnInchidere.Click += new System.EventHandler(this.btnInchidere_Click);
             // 
             // FereastraFacturi
             // 
@@ -137,7 +137,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.DataGridView listaFacturi;
         private System.Windows.Forms.Button btnAdaugare;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
@@ -146,5 +145,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnInchidere;
+        public System.Windows.Forms.DataGridView listaFacturi;
     }
 }

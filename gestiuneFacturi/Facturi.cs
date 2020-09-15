@@ -14,25 +14,18 @@ namespace gestiuneFacturi
         private string data_emitere;
         private double suma;
 
-        public Facturi( string nr_serie, string explicatii, string data_emitere, double suma)
+        public Facturi( string SerieNr, string explicatii, string data_emitere, double suma)
         {
             
-            this.nr_serie = nr_serie;
-            this.explicatii = explicatii;
-            this.data_emitere = data_emitere;
-            this.suma = suma;
+            this.Nr_serie = SerieNr;
+            this.Explicatii = explicatii;
+            this.Data_emitere = data_emitere;
+            this.Suma = suma;
         }
 
-        public string Nr_serie {
-            get { return nr_serie; }
-        }
-        public string Explicatii  {
-            get => explicatii;
-        }
-        public string Data_emitere {
-            get => data_emitere;
-        }
-        public double Suma {
-            get => suma;  }
+        public string Nr_serie { get => nr_serie; set => nr_serie = value; }
+        public string Explicatii { get => explicatii; set => explicatii = value; }
+        public string Data_emitere { get => data_emitere; set => data_emitere = value; }
+        public double Suma { get => suma; set => suma = value; }
     }
 }

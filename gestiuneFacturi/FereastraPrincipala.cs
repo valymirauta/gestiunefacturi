@@ -39,6 +39,17 @@ namespace gestiuneFacturi
             ferFact.Show();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DialogResult dialog = MessageBox.Show("Aplicatia se va inchide. Sunteti sigur?", "Exit",MessageBoxButtons.YesNo);
+            if (dialog == DialogResult.Yes)
+            {
+                Application.Exit();
+            } else if(dialog == DialogResult.No)
+            {
+                ((FormClosingEventArgs)e).Cancel = true;
+            }
+        }
     }
 }
 

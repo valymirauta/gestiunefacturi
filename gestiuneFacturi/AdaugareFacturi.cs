@@ -14,7 +14,7 @@ namespace gestiuneFacturi
     public partial class AdaugareFacturi : Form
     {
         FereastraFacturi ferFact;
-        
+        private DataTable dt;
 
         public AdaugareFacturi(FereastraFacturi ff)
         {
@@ -29,31 +29,25 @@ namespace gestiuneFacturi
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-            DataTable dt=ferFact.listaFacturi.DataSource as DataTable;
-
-            dt.Rows.Add(txtSerieNr.Text, txtExplicatii.Text,
-                txtDataEmitere.Text, txtSuma.Text);
-
            
-            /*
             dt = ferFact.listaFacturi.DataSource as DataTable;
 
             DataRow row = dt.NewRow();
+
             row[0] = txtSerieNr.Text;
             row[1] = txtExplicatii.Text;
             row[2] = txtDataEmitere.Text;
             row[3] = txtSuma.Text;
 
+            Console.WriteLine(txtSerieNr.Text);
+            Console.WriteLine(row[3]);
             dt.Rows.Add(row);
-            
-            
-            ferFact.listaFacturi.Rows.Add(txtSerieNr.Text, txtExplicatii.Text,
-                txtDataEmitere.Text, txtSuma.Text);*/
-            
-    
-            
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+                 Visible = false;
         }
     }
 }

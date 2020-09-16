@@ -69,7 +69,7 @@ namespace gestiuneFacturi
 
         private void btnAdaugare_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            //this.Hide();
             AdaugareFacturi adFac = new AdaugareFacturi(this);
             adFac.Show();
         }
